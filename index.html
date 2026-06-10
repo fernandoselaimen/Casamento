@@ -978,7 +978,7 @@ function submitRSVP() {
   btn.textContent = 'Enviando...';
   btn.disabled = true;
 
-  fetch('https://script.google.com/macros/s/AKfycbwW-XZOZ-GXQCo7OUpT4hCo0s0qkhKhwo-iE0dsN6qNZTI1l1ZFpWQir8IGdnWBjR1BFQ/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwtRP-Hgmss3pQg1TTab4vO7UBvJx2QIjLKOFB46stBtn2yNWRJZbv038iWCRFt3jl1Jg/exec', {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
@@ -1011,7 +1011,7 @@ function fecharPresente(){document.getElementById('modal-presente').style.displa
 document.getElementById('modal-presente').addEventListener('click',function(e){if(e.target===this)fecharPresente()});
 
 function carregarRecados() {
-  fetch('https://script.google.com/macros/s/AKfycbwW-XZOZ-GXQCo7OUpT4hCo0s0qkhKhwo-iE0dsN6qNZTI1l1ZFpWQir8IGdnWBjR1BFQ/exec')
+  fetch('https://script.google.com/macros/s/AKfycbwtRP-Hgmss3pQg1TTab4vO7UBvJx2QIjLKOFB46stBtn2yNWRJZbv038iWCRFt3jl1Jg/exec')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       var grid = document.getElementById('recados-grid');
@@ -1038,7 +1038,7 @@ function enviarRecado(){
   if(!nome||!txt){alert('Preencha seu nome e o recado.');return}
   var btn=document.querySelector('#recados ~ div .btn-submit') || document.querySelector('[onclick="enviarRecado()"]');
   if(btn){btn.textContent='Enviando...';btn.disabled=true;}
-  fetch('https://script.google.com/macros/s/AKfycbwW-XZOZ-GXQCo7OUpT4hCo0s0qkhKhwo-iE0dsN6qNZTI1l1ZFpWQir8IGdnWBjR1BFQ/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwtRP-Hgmss3pQg1TTab4vO7UBvJx2QIjLKOFB46stBtn2yNWRJZbv038iWCRFt3jl1Jg/exec', {
     method:'POST',
     mode:'no-cors',
     headers:{'Content-Type':'application/json'},
