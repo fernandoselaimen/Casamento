@@ -142,15 +142,15 @@ footer p{font-size:0.82rem;letter-spacing:0.2em;text-transform:uppercase;color:v
   <div class="logo">N &amp; F</div>
   <ul id="nav-menu">
     <li><a href="#evento" onclick="closeMenu()">Evento</a></li>
-    <li><a href="#dresscode" onclick="closeMenu()">Traje</a></li>
     <li><a href="#programacao" onclick="closeMenu()">Programação</a></li>
+    <li><a href="#dresscode" onclick="closeMenu()">Traje</a></li>
     <li><a href="#presentes" onclick="closeMenu()">Presentes</a></li>
-    <li><a href="#hotel" onclick="closeMenu()">Hotel</a></li>
-    <li><a href="#fotos" onclick="closeMenu()">Fotos</a></li>
-    <li><a href="#beleza" onclick="closeMenu()">Beleza</a></li>
-    <li><a href="#clima" onclick="closeMenu()">Clima</a></li>
     <li><a href="#confirmacao" onclick="closeMenu()">Confirmar</a></li>
     <li><a href="#recados" onclick="closeMenu()">Recados</a></li>
+    <li><a href="#hotel" onclick="closeMenu()">Hotel</a></li>
+    <li><a href="#beleza" onclick="closeMenu()">Beleza</a></li>
+    <li><a href="#clima" onclick="closeMenu()">Clima</a></li>
+    <li><a href="#fotos" onclick="closeMenu()">Fotos</a></li>
   </ul>
   <button class="nav-toggle" onclick="toggleMenu()">☰</button>
 </nav>
@@ -999,8 +999,8 @@ function submitRSVP() {
   btn.disabled = true;
 
   var xhrRSVP = new XMLHttpRequest();
-  xhrRSVP.open('POST', 'https://script.google.com/macros/s/AKfycbxiRItDPq6jZfxXdl_c6o4ofS1OB0AAqQgsmCIcKx14PkUpLoj0Pd6fMkCfUk_tfxQA/exec');
-  xhrRSVP.setRequestHeader('Content-Type', 'application/json');
+  xhrRSVP.open('POST', 'https://script.google.com/macros/s/AKfycbxZ-5k5K_zt-UCF4rO_QgQRuvBxa0PfkPuPhaa3V1FgYDB6-7MHxDOvzf4B7t1kQSir/exec');
+
   xhrRSVP.onload = function() {
     document.getElementById('rsvp-form').style.display = 'none';
     var msg = (confirm !== 'nao')
@@ -1033,7 +1033,7 @@ document.getElementById('modal-presente').addEventListener('click',function(e){i
 function carregarRecados() {
   (function() {
     var xhrGet = new XMLHttpRequest();
-    xhrGet.open('GET', 'https://script.google.com/macros/s/AKfycbxiRItDPq6jZfxXdl_c6o4ofS1OB0AAqQgsmCIcKx14PkUpLoj0Pd6fMkCfUk_tfxQA/exec');
+    xhrGet.open('GET', 'https://script.google.com/macros/s/AKfycbxZ-5k5K_zt-UCF4rO_QgQRuvBxa0PfkPuPhaa3V1FgYDB6-7MHxDOvzf4B7t1kQSir/exec');
     xhrGet.onload = function() {
       try {
         var data = JSON.parse(xhrGet.responseText);
@@ -1065,8 +1065,8 @@ function enviarRecado(){
   var btn=document.querySelector('#recados ~ div .btn-submit') || document.querySelector('[onclick="enviarRecado()"]');
   if(btn){btn.textContent='Enviando...';btn.disabled=true;}
   var xhr2 = new XMLHttpRequest();
-  xhr2.open('POST', 'https://script.google.com/macros/s/AKfycbxiRItDPq6jZfxXdl_c6o4ofS1OB0AAqQgsmCIcKx14PkUpLoj0Pd6fMkCfUk_tfxQA/exec');
-  xhr2.setRequestHeader('Content-Type', 'application/json');
+  xhr2.open('POST', 'https://script.google.com/macros/s/AKfycbxZ-5k5K_zt-UCF4rO_QgQRuvBxa0PfkPuPhaa3V1FgYDB6-7MHxDOvzf4B7t1kQSir/exec');
+
   xhr2.onload = function() {
     document.getElementById('recado-nome').value='';
     document.getElementById('recado-texto').value='';
